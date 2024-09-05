@@ -4,8 +4,11 @@ import 'package:farmdriverzootech/core/provider/theme_provider.dart';
 import 'package:farmdriverzootech/farmdriver_base/provider/auth_provider.dart';
 import 'package:farmdriverzootech/farmdriver_base/screens/weather_screen.dart';
 import 'package:farmdriverzootech/farmdriver_base/src/edit_notification/edit_notification_screen.dart';
+import 'package:farmdriverzootech/farmdriver_base/src/notifier/firebase_api.dart';
 import 'package:farmdriverzootech/farmdriver_base/widgets/poppup_serfaces.dart';
+import 'package:farmdriverzootech/firebase_options.dart';
 import 'package:farmdriverzootech/production/dashboard/widgets/add_post.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -42,6 +45,7 @@ class _PorductionDashboardState extends State<PorductionDashboard> {
 
   @override
   void initState() {
+    initializeNotification();
     AwesomeNotifications().setListeners(
       onActionReceivedMethod: NotificationController.onActionReceivedMethod,
       onDismissActionReceivedMethod: NotificationController.onDismissActionReceived,
@@ -49,6 +53,29 @@ class _PorductionDashboardState extends State<PorductionDashboard> {
       onNotificationDisplayedMethod: NotificationController.onNotificationDisplayedMethod,
     );
     super.initState();
+  }
+
+  void initializeNotification() async {
+    await AwesomeNotifications().initialize(null, [
+      NotificationChannel(
+        channelKey: "reminder_channel_key",
+        channelName: "reminder_channel",
+        channelDescription: "Test local notification",
+        channelGroupKey: "reminder_channel_group_key",
+      )
+    ], channelGroups: [
+      NotificationChannelGroup(
+        channelGroupKey: "reminder_channel_group_key",
+        channelGroupName: "Reminders Group",
+      )
+    ]);
+    bool isAllowedToSendNotifications = await AwesomeNotifications().isNotificationAllowed();
+    if (!isAllowedToSendNotifications) {
+      AwesomeNotifications().requestPermissionToSendNotifications();
+    }
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    await FirebaseApi().initNotification();
   }
 
   Widget getAddPostPage() {

@@ -40,6 +40,7 @@ dependencies:
   firebase_messaging:
   flutter_localizations:
     sdk: flutter
+  firebase_analytics: ^10.8.0
 
 
 dev_dependencies:

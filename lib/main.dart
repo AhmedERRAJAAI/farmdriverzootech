@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:farmdriverzootech/core/provider/theme_provider.dart';
 import 'package:farmdriverzootech/farmdriver_base/provider/auth_provider.dart';
+import 'package:farmdriverzootech/farmdriver_base/src/notifier/firebase_api.dart';
+import 'package:farmdriverzootech/firebase_options.dart';
 import 'package:farmdriverzootech/production/analyses/provider.dart';
 import 'package:farmdriverzootech/production/bilan_partiel/bilan_provider.dart';
 import 'package:farmdriverzootech/production/charts/provider.dart';
@@ -34,28 +36,6 @@ import 'production/data_entry/provider.dart';
 // // ZOO-TECH POUSSINIERE SCREENS
 
 void main() async {
-  await AwesomeNotifications().initialize(null, [
-    NotificationChannel(
-      channelKey: "reminder_channel_key",
-      channelName: "reminder_channel",
-      channelDescription: "Test local notification",
-      channelGroupKey: "reminder_channel_group_key",
-    )
-  ], channelGroups: [
-    NotificationChannelGroup(
-      channelGroupKey: "reminder_channel_group_key",
-      channelGroupName: "Reminders Group",
-    )
-  ]);
-  bool isAllowedToSendNotifications = await AwesomeNotifications().isNotificationAllowed();
-  if (!isAllowedToSendNotifications) {
-    AwesomeNotifications().requestPermissionToSendNotifications();
-  }
-
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  // await FirebaseApi().initNotification();
-
   // end local notification settings
   await Hive.initFlutter();
   // Hive.deleteFromDisk();
