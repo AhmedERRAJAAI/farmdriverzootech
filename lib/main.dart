@@ -1,10 +1,7 @@
 import 'dart:io';
 
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:farmdriverzootech/core/provider/theme_provider.dart';
 import 'package:farmdriverzootech/farmdriver_base/provider/auth_provider.dart';
-import 'package:farmdriverzootech/farmdriver_base/src/notifier/firebase_api.dart';
-import 'package:farmdriverzootech/firebase_options.dart';
 import 'package:farmdriverzootech/production/analyses/provider.dart';
 import 'package:farmdriverzootech/production/bilan_partiel/bilan_provider.dart';
 import 'package:farmdriverzootech/production/charts/provider.dart';
@@ -13,17 +10,15 @@ import 'package:farmdriverzootech/production/etat_production/provider.dart';
 import 'package:farmdriverzootech/production/performaces_table/provider.dart';
 import 'package:farmdriverzootech/production/supplimentation/provider.dart';
 import 'package:farmdriverzootech/production/synthese/provider.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 // Providers
 import 'package:provider/provider.dart';
-
+import 'farmdriver_base/screens/auth_check.dart';
 // Authentication
 import 'farmdriver_base/screens/authentication.dart';
-import 'farmdriver_base/screens/auth_check.dart';
 import 'farmdriver_base/src/edit_notification/provider.dart';
 import 'farmdriver_base/src/memento/boxes.dart';
 import 'farmdriver_base/src/memento/provider.dart';
@@ -36,7 +31,6 @@ import 'production/data_entry/provider.dart';
 // // ZOO-TECH POUSSINIERE SCREENS
 
 void main() async {
-  // end local notification settings
   await Hive.initFlutter();
   // Hive.deleteFromDisk();
 
