@@ -25,16 +25,11 @@ class PushNotificationProvider {
     });
     try {
       final response = await http.put(url, headers: headers, body: body);
-      print("sent success");
       if (response.statusCode >= 200 && response.statusCode < 300) {
       } else {
-        print("sent failed");
-
         throw Exception(response.statusCode);
       }
     } catch (e) {
-      print("sent failed");
-
       rethrow;
     }
   }

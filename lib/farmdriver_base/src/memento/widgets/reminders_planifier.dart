@@ -16,7 +16,7 @@ class RemindersPlanifier extends StatefulWidget {
 
 class _RemindersPlanifierState extends State<RemindersPlanifier> {
   late DateTime date;
-  final int id = (DateTime.now().millisecondsSinceEpoch / 1000).round();
+  final int id = (DateTime.now().millisecondsSinceEpoch / 1546).round();
   DateTime time = DateTime.now();
   @override
   void initState() {
@@ -197,6 +197,9 @@ class _RemindersPlanifierState extends State<RemindersPlanifier> {
                           channelKey: "reminder_channel_key",
                           title: titleController.text,
                           body: contentController.text,
+                          displayOnBackground: true,
+                          displayOnForeground: true,
+                          wakeUpScreen: true,
                           // icon: 'assets/images/man.png',
                         ),
                         schedule: NotificationCalendar(

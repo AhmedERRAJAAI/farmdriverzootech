@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'farmdrivermobilenotifier.appspot.com',
     iosBundleId: 'com.savas.farmdriverzootech',
   );
+
 }

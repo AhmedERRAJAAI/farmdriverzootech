@@ -56,13 +56,20 @@ class _PorductionDashboardState extends State<PorductionDashboard> {
   }
 
   void initializeNotification() async {
-    await AwesomeNotifications().initialize(null, [
+    await AwesomeNotifications().initialize('resource://drawable/res_app_icon', [
       NotificationChannel(
         channelKey: "reminder_channel_key",
         channelName: "reminder_channel",
-        channelDescription: "Test local notification",
-        channelGroupKey: "reminder_channel_group_key",
-      )
+        channelDescription: "sends local reminders notifications",
+        channelGroupKey: "weather_channel_group_key",
+      ),
+      NotificationChannel(
+        channelKey: "weather_channel_key",
+        channelName: "weather_channel",
+        channelDescription: "Weather notification channel",
+        channelGroupKey: "weather_channel_group_key",
+        enableLights: true,
+      ),
     ], channelGroups: [
       NotificationChannelGroup(
         channelGroupKey: "reminder_channel_group_key",
@@ -75,7 +82,9 @@ class _PorductionDashboardState extends State<PorductionDashboard> {
     }
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    await FirebaseApi().initNotification();
+    await Future.delayed(const Duration(seconds: 1));
+    await FirebaseApi().initNotification(context);
+
   }
 
   Widget getAddPostPage() {
