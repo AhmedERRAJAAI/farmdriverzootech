@@ -1,4 +1,4 @@
-package com.savas.farmdriverzootech
+package com.savas.farmdrivermobile
 
 import io.flutter.embedding.android.FlutterActivity
 

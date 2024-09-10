@@ -1,10 +1,10 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:farmdriverzootech/farmdriver_base/widgets/info_dialog.dart';
-import 'package:farmdriverzootech/farmdriver_base/widgets/pickers.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '../../widgets/pickers.dart';
+import '../../widgets/info_dialog.dart';
 
 import 'provider.dart';
 import 'widgets/reminders_planifier.dart';

@@ -1,7 +1,7 @@
-import 'package:farmdriverzootech/farmdriver_base/src/age_disk/age_disk_calc.dart';
-import 'package:farmdriverzootech/farmdriver_base/src/memento/memento_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import '../../farmdriver_base/src/memento/memento_screen.dart';
+import '../../farmdriver_base/src/age_disk/age_disk_calc.dart';
 
 class AppsScreen extends StatelessWidget {
   const AppsScreen({super.key});

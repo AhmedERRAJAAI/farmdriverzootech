@@ -1,15 +1,15 @@
 import 'dart:io';
 
-import 'package:farmdriverzootech/core/provider/theme_provider.dart';
-import 'package:farmdriverzootech/farmdriver_base/provider/auth_provider.dart';
-import 'package:farmdriverzootech/production/analyses/provider.dart';
-import 'package:farmdriverzootech/production/bilan_partiel/bilan_provider.dart';
-import 'package:farmdriverzootech/production/charts/provider.dart';
-import 'package:farmdriverzootech/production/dashboard/provider/init_provider.dart';
-import 'package:farmdriverzootech/production/etat_production/provider.dart';
-import 'package:farmdriverzootech/production/performaces_table/provider.dart';
-import 'package:farmdriverzootech/production/supplimentation/provider.dart';
-import 'package:farmdriverzootech/production/synthese/provider.dart';
+import 'core/provider/theme_provider.dart';
+import 'farmdriver_base/provider/auth_provider.dart';
+import 'production/analyses/provider.dart';
+import 'production/bilan_partiel/bilan_provider.dart';
+import 'production/charts/provider.dart';
+import 'production/dashboard/provider/init_provider.dart';
+import 'production/etat_production/provider.dart';
+import 'production/performaces_table/provider.dart';
+import 'production/supplimentation/provider.dart';
+import 'production/synthese/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';

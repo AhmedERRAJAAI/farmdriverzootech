@@ -84,7 +84,6 @@ class _PorductionDashboardState extends State<PorductionDashboard> {
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
     await Future.delayed(const Duration(seconds: 1));
     await FirebaseApi().initNotification(context);
-
   }
 
   Widget getAddPostPage() {

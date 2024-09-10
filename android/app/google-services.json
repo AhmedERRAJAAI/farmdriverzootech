@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "752771457623",
-    "project_id": "farmdrivermobilenotifier",
-    "storage_bucket": "farmdrivermobilenotifier.appspot.com"
+    "project_number": "374453007268",
+    "project_id": "farmdrivermobilefirenotifier",
+    "storage_bucket": "farmdrivermobilefirenotifier.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:752771457623:android:7e1055fbdb92035a49f912",
+        "mobilesdk_app_id": "1:374453007268:android:710531d6d57e165bc08731",
         "android_client_info": {
-          "package_name": "com.savas.farmdriverzootech"
+          "package_name": "com.savas.farmdrivermobile"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB9qEiLVV773hjdbUgpw5JcklFBtn82LX8"
+          "current_key": "AIzaSyAp53wW8-BNNZgAFYQ3dxRdSCGcjREOjcI"
         }
       ],
       "services": {

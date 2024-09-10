@@ -1,5 +1,4 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
-import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 
 class NotificationController {
   //use this method to detect when a new notification is scheduled

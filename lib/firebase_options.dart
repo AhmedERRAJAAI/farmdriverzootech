@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB9qEiLVV773hjdbUgpw5JcklFBtn82LX8',
-    appId: '1:752771457623:android:7e1055fbdb92035a49f912',
-    messagingSenderId: '752771457623',
-    projectId: 'farmdrivermobilenotifier',
-    storageBucket: 'farmdrivermobilenotifier.appspot.com',
+    apiKey: 'AIzaSyAp53wW8-BNNZgAFYQ3dxRdSCGcjREOjcI',
+    appId: '1:374453007268:android:710531d6d57e165bc08731',
+    messagingSenderId: '374453007268',
+    projectId: 'farmdrivermobilefirenotifier',
+    storageBucket: 'farmdrivermobilefirenotifier.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCJm609UHObRkXJqEA3sECFSfOcuuQN3hg',
-    appId: '1:752771457623:ios:8b313ab6475d0f4249f912',
-    messagingSenderId: '752771457623',
-    projectId: 'farmdrivermobilenotifier',
-    storageBucket: 'farmdrivermobilenotifier.appspot.com',
-    iosBundleId: 'com.savas.farmdriverzootech',
+    apiKey: 'AIzaSyDkhayo7SYdn2wYq1Yan_GVYxgt5jm0OdM',
+    appId: '1:374453007268:ios:eef1aed64efd4db5c08731',
+    messagingSenderId: '374453007268',
+    projectId: 'farmdrivermobilefirenotifier',
+    storageBucket: 'farmdrivermobilefirenotifier.appspot.com',
+    iosBundleId: 'com.savas.farmdrivermobile',
   );
 
 }

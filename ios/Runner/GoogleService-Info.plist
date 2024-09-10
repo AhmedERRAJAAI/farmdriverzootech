@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCJm609UHObRkXJqEA3sECFSfOcuuQN3hg</string>
+	<string>AIzaSyDkhayo7SYdn2wYq1Yan_GVYxgt5jm0OdM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>752771457623</string>
+	<string>374453007268</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.savas.farmdriverzootech</string>
+	<string>com.savas.farmdrivermobile</string>
 	<key>PROJECT_ID</key>
-	<string>farmdrivermobilenotifier</string>
+	<string>farmdrivermobilefirenotifier</string>
 	<key>STORAGE_BUCKET</key>
-	<string>farmdrivermobilenotifier.appspot.com</string>
+	<string>farmdrivermobilefirenotifier.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:752771457623:ios:8b313ab6475d0f4249f912</string>
+	<string>1:374453007268:ios:eef1aed64efd4db5c08731</string>
 </dict>
 </plist>

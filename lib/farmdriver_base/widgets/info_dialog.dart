@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:farmdriverzootech/production/performaces_table/constants.dart';
+import '../../production/performaces_table/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
